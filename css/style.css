@@ -1,0 +1,40 @@
+body {
+  background: #f1f1f1;
+  color: #222;
+  font-family: 'Open Sans', sans-serif;
+}
+
+.wrapper {
+  padding: 100px;
+  max-width: 500%;
+  display: block;
+  text-align: center;
+  margin: 0 auto;
+}
+
+.roles {
+    font-size: 24px;
+    height: 100px;
+    vertical-align: middle;
+    overflow: hidden;
+}
+
+.roles div {
+    height: 100px;
+    -webkit-transition: margin-top 1s ease-in-out;
+    transition: margin-top 1s ease-in-out;
+}
+
+#footer {
+  position:fixed;
+  left:0px;
+  bottom:0px;
+  height:40px;
+  width:100%;
+  background: darkgray;
+}
+
+a{
+  color: white;
+  text-decoration: none;
+}
