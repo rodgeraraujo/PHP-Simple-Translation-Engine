@@ -7,7 +7,9 @@
             'designer' => 'I am a designer.',
             'student' => 'I am a student.',
             'skills' => 'Always evolving my skills.',
-            'translate' => 'Translate to'
+            'translate' => 'Translate to',
+            'english' => 'English',
+            'portuguese' => "Portuguese"
         ),
         'pt' => array(
             'hello' => 'Olá',
@@ -16,7 +18,9 @@
             'designer' => 'Eu sou um designer.',
             'student' => 'Eu sou um estudante.',
             'skills' => 'Sempre evoluindo minhas habilidades.',
-            'translate' => 'Traduza para'
+            'translate' => 'Traduza para',
+            'portuguese' => 'Português',
+            'english' => 'Inglês'
         )
     );
 ?>

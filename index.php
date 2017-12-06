@@ -3,6 +3,14 @@
     include ('lang.php');
     include ('defaultLang.php');
     $url = 'http://' . $_SERVER['HTTP_HOST'] . $_SERVER['REQUEST_URI'];
+
+    $selectedEn = "";
+    $selectedPt = "";
+    if($url == "http://localhost:8080/ADS/PHP_PROJECTS/translate_website/index.php?lang=pt"){
+        $selectedPt = " selected";
+    }else{
+        $selectedEn = " selected";
+    }
 ?>
 
 
@@ -15,6 +23,11 @@
         <link href='https://fonts.googleapis.com/css?family=Open+Sans:300' rel='stylesheet' type='text/css'>
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
         <link rel="stylesheet" href="css/style.css">
+        <script>
+            function handleSelect(elm){
+                window.location = elm.value+"";
+            }
+        </script>
     </head>
 
     <body>
@@ -47,8 +60,18 @@
         
         <footer id="footer">
             <center>
-                <p></p>
-                <p><?php echo $lang[$default]['translate']; ?> <a href="<?php echo $url . '?lang=pt'; ?>">pt-BR</a>.</p>
+                <br>
+                <div class="lang-switcher">
+                    <div class="row">
+                        <div class="row-1">
+                            <img class="globe-img" width="25" height="25" src="globe.png"/>
+                            <select id="soflow" class="select-lang" name="formal" onchange="javascript:handleSelect(this)">
+                                <option class="option-text" value="index.php?lang=en"<?php echo $selectedEn; ?>><?php echo $lang[$default]['english'];?></option>
+                                <option class="option-text" value="index.php?lang=pt"<?php echo $selectedPt; ?>><?php echo $lang[$default]['portuguese'];?></option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
             </center>
         </footer>
     </body>
